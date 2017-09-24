@@ -11,7 +11,7 @@ theme = "hugo-sustain"
   post = "/:year/:month/:day/:slug"
 
 [params]
-  avatar = "profile.png"
+  avatar = "kimberly.jpg"
   author = "Kimberly Staudt"
   description = "A Data Science Blog"
 
