@@ -6,7 +6,6 @@
     <description>Recent content in Blogs on Kimberly Staudt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
     
 	<atom:link href="https://kimsdatascienceblog.netlify.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,14 +13,13 @@
     <item>
       <title>Data Visualization</title>
       <link>https://kimsdatascienceblog.netlify.com/blog/datavisualization/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kimsdatascienceblog.netlify.com/blog/datavisualization/</guid>
-      <description>Data Visualization
-       This is a tutorial on how to use RStudio to make graphs in RStudio, using the Lahman database.</description>
+      <description>The purpose of this tutorial is to demonstrate how to plot data on a graph using the lahman baseball database.
+Open a new R Script.The following will need to be installed: lahman,ggplot2,ggiraph, and dplyr.This can be achieved by choosing the Install Packages option under the Tools tab. Once installed, pull from the library as seen below:
+library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)library(ggiraph)Now we can begin.</description>
     </item>
-    
-
     
   </channel>
 </rss>

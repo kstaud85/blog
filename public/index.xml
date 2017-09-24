@@ -10,5 +10,16 @@
 	<atom:link href="https://kimsdatascienceblog.netlify.com/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Data Visualization</title>
+      <link>https://kimsdatascienceblog.netlify.com/blog/datavisualization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kimsdatascienceblog.netlify.com/blog/datavisualization/</guid>
+      <description>The purpose of this tutorial is to demonstrate how to plot data on a graph using the lahman baseball database.
+Open a new R Script.The following will need to be installed: lahman,ggplot2,ggiraph, and dplyr.This can be achieved by choosing the Install Packages option under the Tools tab. Once installed, pull from the library as seen below:
+library(Lahman)library(dplyr)## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)library(ggiraph)Now we can begin.</description>
+    </item>
+    
   </channel>
 </rss>

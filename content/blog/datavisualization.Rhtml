@@ -1,0 +1,44 @@
+---
+title: "Data Visualization"
+author: "Kimberly Staudt"
+date: 2015-07-23T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "dplyr", "lahman"]
+---
+
+
+
+<div id="r-markdown" class="section level1">
+
+<p>The purpose of this tutorial is to demonstrate how to plot data on a graph using the lahman baseball database. 
+
+Open a new R Script.The following will need to be installed: lahman,ggplot2,ggiraph, and dplyr.This can be achieved by choosing the <b>Install Packages</b> option under the <b>Tools</b> tab. Once installed, pull from the library as seen below: 
+</p>
+
+<pre class="r"><code>
+library(Lahman)
+library(dplyr)
+library(ggplot2)
+library(ggiraph)
+
+DF &lt;- Batting%&gt;%
+  group_by(playerID)%&gt;% 
+  summarize(career_HR = sum(HR),career_SO = sum(SO))%&gt;%
+  filter(career_HR &gt;= 400)
+
+<p>Now we can begin.</p>
+
+<h1>Grouping & Filtering Data</h1>
+<p>Under the <b>Insert</b> tab choose <b>R</b>. Type the code below into the box. The data is grouped using the player's ID, where columns show their career homeruns and career strike outs. To filter the data, we specify that we want only players with career homeruns greater than 400. We then set this to a variable,<b>df</b>, to be referenced to later. </p>
+R_vs_SO &lt;- inner_join(DF,Master, by=c(&quot;playerID&quot;))%&gt;% 
+  select(nameFirst,nameLast,career_SO, career_HR) 
+  
+<h2>Joining Tables</h2>
+<p>To join our DF table with the Master table, type the following below. Again, we are selecting the playerId, first and last name, career homeruns, and career strikeouts. Finally, assign the variable name HR_vs_SO to be referenced in the next step.</p>
+ggplot()+
+  geom_point(data = HR_vs_SO, aes(x=career_SO, y=career_HR))+
+  ggtitle(&quot;Career Homeruns vs. Strikeouts for Hitters with over 400 Homeruns&quot;)+
+  xlab(&quot;Career StrikeOuts&quot;)+
+  ylab(&quot;Career Homeruns&quot;)</code></pre>
+
+</div>
