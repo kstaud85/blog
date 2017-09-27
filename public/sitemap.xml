@@ -17,6 +17,10 @@
   </url>
   
   <url>
+    <loc>https://kimsdatascienceblog.netlify.com/blog/historgrams/</loc>
+  </url>
+  
+  <url>
     <loc>https://kimsdatascienceblog.netlify.com/</loc>
     <priority>0</priority>
   </url>

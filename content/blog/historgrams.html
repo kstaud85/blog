@@ -1,0 +1,39 @@
+---
+title: "Histograms and Bar Charts"
+output: html_document
+---
+
+
+
+<p>The purpose of this tutorial is to demonstrate how to create histograms and barcharts using dplyr and the lahman data base. Histograms are useful when a variable is represented by a range of numbers rather than a single point (such as in line charts). Simularly, a bar chart measures the height (numerical value) of a variable.</p>
+<p>For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2. A bar chart would list the colors on the X axis, with blue being the highest bar and green the lowest. Bar charts are an easy way to display limited variables. If you were surveying 1000 people whom collectively named 100 different colors, a different chart would be more suitable.</p>
+<p>First install the following packages and pull them from the library as demonstrated below. Some packages may not need to be updated had you already installed them. In this case you need only to pull them from the library:</p>
+<pre class="r"><code>library(Lahman)
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(ggiraph)</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
+<pre class="r"><code>library(ggplot2)
+library(devtools)</code></pre>
+<div id="histograms" class="section level2">
+<h2>Histograms</h2>
+</div>
+<div id="how-to-make-a-barchart" class="section level2">
+<h2>How to make a Barchart</h2>
+<pre class="r"><code>df&lt;-Teams%&gt;%
+  filter(yearID==1980)%&gt;%
+  select(name,HR)%&gt;%
+  arrange(HR)</code></pre>
+<pre class="r"><code>df$name&lt;-factor(df$name,levels=df$name)</code></pre>
+<pre class="r"><code>ggplot()+
+  geom_bar(data=df,aes(x=name,y=HR), stat=&quot;identity&quot;, color=&quot;white&quot;, fill=&quot;blue&quot;)+
+  coord_flip()</code></pre>
+<p><img src="/blog/historgrams_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>

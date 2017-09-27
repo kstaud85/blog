@@ -9,14 +9,14 @@ output: html_document
 <p>Open a new R Script.The following will need to be installed: lahman,ggplot2,ggiraph, and dplyr.This can be achieved by choosing the <b>Install Packages</b> option under the <b>Tools</b> tab. Once installed, pull from the library as seen below:</p>
 <pre class="r"><code>library(Lahman)
 library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
+<pre><code>FALSE 
+FALSE Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>FALSE The following objects are masked from &#39;package:stats&#39;:
+FALSE 
+FALSE     filter, lag</code></pre>
+<pre><code>FALSE The following objects are masked from &#39;package:base&#39;:
+FALSE 
+FALSE     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code>library(ggplot2)
 library(ggiraph)</code></pre>
 <p>Now we can begin.</p>
@@ -42,6 +42,5 @@ library(ggiraph)</code></pre>
   ggtitle(&quot;Career Homeruns vs. Strikeouts for Great Hitters&quot;)+
   xlab(&quot;Career Strikeouts&quot;)+
   ylab(&quot;Career Homeruns&quot;)</code></pre>
-<pre><code>## Warning: Ignoring unknown aesthetics: tooltop</code></pre>
 <p><img src="/blog/datavisualization_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
