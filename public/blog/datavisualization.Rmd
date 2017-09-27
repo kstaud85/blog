@@ -11,7 +11,7 @@ The purpose of this tutorial is to demonstrate how to plot data on a graph using
 
 Open a new R Script.The following will need to be installed: lahman,ggplot2,ggiraph, and dplyr.This can be achieved by choosing the <b>Install Packages</b> option under the <b>Tools</b> tab. Once installed, pull from the library as seen below: 
 
-```{r warning=FALSE, comment=FALSE}
+```{r warning=FALSE, comment=FALSE, message=FALSE}
 library(Lahman)
 library(dplyr)
 library(ggplot2)

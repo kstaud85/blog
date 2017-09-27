@@ -1,13 +1,13 @@
 ---
-title: "Histograms and Bar Charts"
+title: "Data Visualization: Histograms and Bar Charts"
 output: html_document
 ---
 
 
 
 <p>The purpose of this tutorial is to demonstrate how to create histograms and barcharts using dplyr and the lahman data base. Histograms are useful when a variable is represented by a range of numbers rather than a single point (such as in line charts). Simularly, a bar chart measures the height (numerical value) of a variable.</p>
-<p>For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2. A bar chart would list the colors on the X axis, with blue being the highest bar and green the lowest. Bar charts are an easy way to display limited variables. If you were surveying 1000 people whom collectively named 100 different colors, a different chart would be more suitable.</p>
-<p>First install the following packages and pull them from the library as demonstrated below. Some packages may not need to be updated had you already installed them. In this case you need only to pull them from the library:</p>
+<p>For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2. A bar chart would list the colors on the X axis, with blue being the highest bar and green the lowest. Bar charts are an easy way to display a limited amount of variables. If you were surveying 1000 people whom collectively named 100 different colors, a different chart would be more suitable.</p>
+<p>First, install the following packages and pull them from the library as demonstrated below. Some packages may not need to be updated if you have already installed them. In this case, you need only to pull them from the library:</p>
 <pre class="r"><code>library(Lahman)
 library(dplyr)</code></pre>
 <pre><code>## 
@@ -20,13 +20,10 @@ library(dplyr)</code></pre>
 ##     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code>library(ggiraph)</code></pre>
 <pre><code>## Loading required package: ggplot2</code></pre>
-<pre class="r"><code>library(ggplot2)
-library(devtools)</code></pre>
-<div id="histograms" class="section level2">
-<h2>Histograms</h2>
-</div>
+<pre class="r"><code>library(ggplot2)</code></pre>
 <div id="how-to-make-a-barchart" class="section level2">
 <h2>How to make a Barchart</h2>
+<p>Here, we want to extract data from the <b>Teams</b> table, for the year 1980. Select team name and homeruns for the columns, and arrange the order by homerun. Assign the code to a variable, df (data frame) to be referenced later.</p>
 <pre class="r"><code>df&lt;-Teams%&gt;%
   filter(yearID==1980)%&gt;%
   select(name,HR)%&gt;%

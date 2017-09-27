@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="map[]" />
     <meta name="description" content="A Data Science Blog">
-    <link rel="shortcut icon" type="image/x-icon" href="https://kimsdatascienceblog.netlify.com/img/favicon.ico">
-    <title>Histograms and Bar Charts</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <title>Data Visualization: Histograms and Bar Charts</title>
     <meta name="generator" content="Hugo 0.29" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://kimsdatascienceblog.netlify.com/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
     
@@ -29,7 +29,7 @@
       <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="https://kimsdatascienceblog.netlify.com/"><i class="fa fa-home"></i></a>
+      <a class="navbar-brand" href="/"><i class="fa fa-home"></i></a>
     </div>
     <div id="navbar">
       <ul class="nav navbar-nav navbar-right">
@@ -47,7 +47,7 @@
       <div class="container">
         <div class="blog-post">
           <h3>
-            <strong><a href="https://kimsdatascienceblog.netlify.com/blog/historgrams/">Histograms and Bar Charts</a></strong>
+            <strong><a href="/blog/historgrams/">Data Visualization: Histograms and Bar Charts</a></strong>
           </h3>
         </div>
         <div class="blog-title">
@@ -61,8 +61,8 @@
           <div class="panel-body">
             <div class="blogpost">
               <p>The purpose of this tutorial is to demonstrate how to create histograms and barcharts using dplyr and the lahman data base. Histograms are useful when a variable is represented by a range of numbers rather than a single point (such as in line charts). Simularly, a bar chart measures the height (numerical value) of a variable.</p>
-<p>For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2. A bar chart would list the colors on the X axis, with blue being the highest bar and green the lowest. Bar charts are an easy way to display limited variables. If you were surveying 1000 people whom collectively named 100 different colors, a different chart would be more suitable.</p>
-<p>First install the following packages and pull them from the library as demonstrated below. Some packages may not need to be updated had you already installed them. In this case you need only to pull them from the library:</p>
+<p>For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2. A bar chart would list the colors on the X axis, with blue being the highest bar and green the lowest. Bar charts are an easy way to display a limited amount of variables. If you were surveying 1000 people whom collectively named 100 different colors, a different chart would be more suitable.</p>
+<p>First, install the following packages and pull them from the library as demonstrated below. Some packages may not need to be updated if you have already installed them. In this case, you need only to pull them from the library:</p>
 <pre class="r"><code>library(Lahman)
 library(dplyr)</code></pre>
 <pre><code>## 
@@ -75,13 +75,10 @@ library(dplyr)</code></pre>
 ##     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code>library(ggiraph)</code></pre>
 <pre><code>## Loading required package: ggplot2</code></pre>
-<pre class="r"><code>library(ggplot2)
-library(devtools)</code></pre>
-<div id="histograms" class="section level2">
-<h2>Histograms</h2>
-</div>
+<pre class="r"><code>library(ggplot2)</code></pre>
 <div id="how-to-make-a-barchart" class="section level2">
 <h2>How to make a Barchart</h2>
+<p>Here, we want to extract data from the <b>Teams</b> table, for the year 1980. Select team name and homeruns for the columns, and arrange the order by homerun. Assign the code to a variable, df (data frame) to be referenced later.</p>
 <pre class="r"><code>df&lt;-Teams%&gt;%
   filter(yearID==1980)%&gt;%
   select(name,HR)%&gt;%
@@ -140,10 +137,10 @@ library(devtools)</code></pre>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://kimsdatascienceblog.netlify.com/js/docs.min.js"></script>
-<script src="https://kimsdatascienceblog.netlify.com/js/main.js"></script>
+<script src="/js/docs.min.js"></script>
+<script src="/js/main.js"></script>
 
-<script src="https://kimsdatascienceblog.netlify.com/js/ie10-viewport-bug-workaround.js"></script>
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
 
 
     
