@@ -1,10 +1,10 @@
 /* Main page with stikky-footer */
 html, body {
   height: 100%;
-  background-color: #fff;
+  background-color: #82CAFA;
   font-family: 'Source Sans Pro', sans-serif;
   /* The html and body elements cannot have any padding or margin. */
-  border-top: 3px solid #27A822;
+  border-top: 3px solid #ffffff;
 }
 
 /* Wrapper for page content to push down footer */
@@ -115,10 +115,10 @@ html, body {
   font-size: 15px;
 }
 .panel-default h4 a, h5 a {
-  color: #27A822;
+  color: #ffffff;
 }
 .panel-default h4 a:hover, h5 a:hover {
-  color: #267723;
+  color: #ffae00;
 }
 .panel{
   border-style: none;
