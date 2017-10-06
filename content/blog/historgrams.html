@@ -8,8 +8,10 @@ output: html_document
 <p>The purpose of this tutorial is to demonstrate how to create histograms and barcharts using dplyr and the lahman data base. Histograms are useful when a variable is represented by a range of numbers rather than a single point (such as in line charts). Simularly, a bar chart measures the height (numerical value) of a variable.</p>
 <p>For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2. A bar chart would list the colors on the X axis, with blue being the highest bar and green the lowest. Bar charts are an easy way to display a limited amount of variables. If you were surveying 1000 people whom collectively named 100 different colors, a different chart would be more suitable.</p>
 <p>First, install the following packages and pull them from the library as demonstrated below. Some packages may not need to be updated if you have already installed them. In this case, you need only to pull them from the library:</p>
-<pre class="r"><code>library(Lahman)
-library(dplyr)</code></pre>
+<pre class="r"><code>library(Lahman)</code></pre>
+<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.2</code></pre>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.4.2</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -19,7 +21,9 @@ library(dplyr)</code></pre>
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code>library(ggiraph)</code></pre>
+<pre><code>## Warning: package &#39;ggiraph&#39; was built under R version 3.4.2</code></pre>
 <pre><code>## Loading required package: ggplot2</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.4.2</code></pre>
 <pre class="r"><code>library(ggplot2)</code></pre>
 <div id="how-to-make-a-barchart" class="section level2">
 <h2>How to make a Barchart</h2>

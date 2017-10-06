@@ -1,0 +1,50 @@
+---
+title: "Histograms Tutorial 2"
+author: "Kimberly Staudt"
+date: 2015-07-23T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "dplyr", "lahman"]
+---
+
+<div id="r-markdown" class="section level1">
+
+<h1>Extracting the Data</h1>
+<p>This is the second tutorial on creating historgrams via RStudio.
+Install the following and pull from the library:
+</p>
+
+<pre class="r"><code>
+library(Lahman)
+library(dplyr)
+library(ggplot2)
+library(ggiraph)
+
+DF &lt;- Teams%&gt;%
+  filter(yearID==1980)%&gt;% 
+  select(name,HR)%&gt;% 
+  arrange(HR)
+  
+</p><b>str</b> give the structure of whatever data you have. Store your data as a factor vector, rather than a character vector.The benefit to this is that factor vectors are organized into different levels . 
+Type <b>class(df$name)</b> to confirm that the data has been stored correctly. 
+Use <b>levels(df$name)</b> to view levels.
+Use <b>levels=df$name</b> to set levels to the same order as the columns. </p>
+
+str(df$name)  
+df$name&lt;-factor(df$name,levels=df$name)
+
+<h2>Data visualization</h2>
+
+<p>In the last post, we used ggplot to create a visual representation of the data. In this representation, we are going to name our <b>x</b> and <b>y</b> coordinates with <b>xlab</b> and <b>ylab</b>, repsectively. </p>
+
+g&lt;-ggplot()+
+  geom_bar(data=df,aes(x=name,y=HR,tooltip=HR, data_id=name), stat=&quot;identity&quot;, color=&quot;blue&quot;,fill=&quot;white&quot;)+
+  coord_flip()+
+  ggtitle(&quot;1980 Team Homeruns&quot;)+
+  xlab(&quot;Team&quot;)+
+  ylab(&quot;Homeruns&quot;)
+  
+<p>Optional: Use <b>ggiraph</b> to change color characteristics when hovering over the graph.</p>
+ggiraph(code=print(g), hover_css=fill:&quot;red&quot;;stroke:&quot;white&quot;)</code></pre>
+
+</div>
+

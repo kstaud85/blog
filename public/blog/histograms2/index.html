@@ -7,7 +7,7 @@
     <meta name="author" content="map[]" />
     <meta name="description" content="A Data Science Blog">
     <link rel="shortcut icon" type="image/x-icon" href="https://kimsdatascienceblog.netlify.com/img/favicon.ico">
-    <title>Data Visualization: Histograms and Bar Charts</title>
+    <title>Histograms 2</title>
     <meta name="generator" content="Hugo 0.29" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://kimsdatascienceblog.netlify.com/css/main.css" />
@@ -47,7 +47,7 @@
       <div class="container">
         <div class="blog-post">
           <h3>
-            <strong><a href="https://kimsdatascienceblog.netlify.com/blog/historgrams/">Data Visualization: Histograms and Bar Charts</a></strong>
+            <strong><a href="https://kimsdatascienceblog.netlify.com/blog/histograms2/">Histograms 2</a></strong>
           </h3>
         </div>
         <div class="blog-title">
@@ -60,38 +60,35 @@
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="blogpost">
-              <p>The purpose of this tutorial is to demonstrate how to create histograms and barcharts using dplyr and the lahman data base. Histograms are useful when a variable is represented by a range of numbers rather than a single point (such as in line charts). Simularly, a bar chart measures the height (numerical value) of a variable.</p>
-<p>For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2. A bar chart would list the colors on the X axis, with blue being the highest bar and green the lowest. Bar charts are an easy way to display a limited amount of variables. If you were surveying 1000 people whom collectively named 100 different colors, a different chart would be more suitable.</p>
-<p>First, install the following packages and pull them from the library as demonstrated below. Some packages may not need to be updated if you have already installed them. In this case, you need only to pull them from the library:</p>
-<pre class="r"><code>library(Lahman)</code></pre>
-<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.2</code></pre>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.4.2</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>library(ggiraph)</code></pre>
-<pre><code>## Warning: package &#39;ggiraph&#39; was built under R version 3.4.2</code></pre>
-<pre><code>## Loading required package: ggplot2</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.4.2</code></pre>
-<pre class="r"><code>library(ggplot2)</code></pre>
-<div id="how-to-make-a-barchart" class="section level2">
-<h2>How to make a Barchart</h2>
-<p>Here, we want to extract data from the <b>Teams</b> table, for the year 1980. Select team name and homeruns for the columns, and arrange the order by homerun. Assign the code to a variable, df (data frame) to be referenced later.</p>
+              <p>This is the second tutorial on creating historgrams via RStudio. Install the following and pull from the library:</p>
+<pre class="r"><code>library(dplyr)
+library(Lahman)
+library(ggplot2)
+library(ggiraph)</code></pre>
+<div id="extracting-the-data" class="section level2">
+<h2>Extracting the Data</h2>
+<p>In the last post, we assigned our extracted data to df(dataframe).Complete this step again.</p>
 <pre class="r"><code>df&lt;-Teams%&gt;%
   filter(yearID==1980)%&gt;%
   select(name,HR)%&gt;%
   arrange(HR)</code></pre>
-<pre class="r"><code>df$name&lt;-factor(df$name,levels=df$name)</code></pre>
-<pre class="r"><code>ggplot()+
-  geom_bar(data=df,aes(x=name,y=HR), stat=&quot;identity&quot;, color=&quot;white&quot;, fill=&quot;blue&quot;)+
-  coord_flip()</code></pre>
-<p><img src="/blog/historgrams_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><b>str</b> give the structure of whatever data you have. Store your data as a factor vector, rather than a character vector.The benefit to this is that factor vectors are organized into different levels . Type <b>class(df<span class="math inline">\(name)&lt;/b&gt; to confirm that the data has been stored correctly. Use &lt;b&gt;levels(df\)</span>name)</b> to view levels. Use <b>levels=df$name</b> to set levels to the same order as the columns.</p>
+<pre class="r"><code>str(df$name)  </code></pre>
+<pre><code>##  chr [1:26] &quot;New York Mets&quot; &quot;San Diego Padres&quot; &quot;Houston Astros&quot; ...</code></pre>
+<pre class="r"><code>df$name&lt;-factor(df$name,levels=df$name) </code></pre>
+</div>
+<div id="data-visualization" class="section level2">
+<h2>Data visualization</h2>
+<p>In the last post, we used ggplot to create a visual representation of the data. In this representation, we are going to name our <b>x</b> and <b>y</b> coordinates with <b>xlab</b> and <b>ylab</b>, repsectively.</p>
+<pre class="r"><code>g&lt;-ggplot()+
+  geom_bar(data=df,aes(x=name,y=HR,tooltip=HR, data_id=name), stat=&quot;identity&quot;, color=&quot;blue&quot;,fill=&quot;white&quot;)+
+  coord_flip()+
+  ggtitle(&quot;1980 Team Homeruns&quot;)+
+  xlab(&quot;Team&quot;)+
+  ylab(&quot;Homeruns&quot;)</code></pre>
+<pre><code>## Warning: Ignoring unknown aesthetics: tooltip, data_id</code></pre>
+<p>Optional: Use <b>ggiraph</b> to change color characteristics when hovering over the graph:</p>
+<p>ggiraph(code=print(g), hover_css=fill:“red”;stroke:“white”)</p>
 </div>
 
               <hr>

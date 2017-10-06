@@ -3,30 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/blog/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/blog/datavisualization/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/blog/datavisualization/</loc>
   </url>
   
   <url>
-    <loc>/blog/historgrams/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/blog/historgrams/</loc>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/blog/histograms2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kimsdatascienceblog.netlify.com/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/tags/</loc>
     <priority>0</priority>
   </url>
   
