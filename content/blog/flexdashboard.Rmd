@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## What is flexdashboard?
+## What is Flexdashboard?
 
 Flexdashboard is an R package that allows the user to display data visualizations such as graphs,tables, tables, and widgets on a dashboard. Flexdashboard users can easily make size adjustments to chart proportions, and make the visualizations mobile friendly. An example of flexdashboard being used in this tutorial can be found below:
 <https://kstaud85.github.io/https-kstaud85.github.io-dashboard/>
@@ -67,7 +67,7 @@ for(i in 1:36574)
 
 ##Data Visualization
 
-Set deaths to df (data frame), anf filter with the str_detect function used earlier in our loop. The Vietnam War (1950-1953) can be filtered as any date before July 1953 because any deaths after that date would likely have an insignificant relationship with the war. Some outliers were not confirmed dead until decdes after the war. In summerize, the number of deaths for INCIDENT_DATE is <b>n</b>.
+Set deaths to df (data frame), anf filter with the str_detect function used earlier in our loop. The Vietnam War (1950-1953) can be filtered as any date before July 1953 because any deaths after that date would likely have an insignificant relationship with the war. Some outliers were not confirmed dead until decdes after the war. In summerize, the number of deaths for INCIDENT_DATE is <i>n</i>.
 
 ```{r}
 df<-deaths%>%
