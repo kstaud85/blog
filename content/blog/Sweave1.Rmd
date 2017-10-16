@@ -1,0 +1,21 @@
+---
+title: "Arithmetic Using R & Knitr"
+output: html_document
+---
+
+```{r setup, include=FALSE warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(knitr)
+library(ggplot2)
+```
+
+##Introduction
+Knitr is an R package that generate reports using R code. The R code is intigrated into the following languages: LaTex, LyX, HTML, Markdown, and AsciiDoc (text document format).
+This tutorial uses Knitr to create an arthimetic article in RStudio. We will covering addition, subtraction, division, multiplication, and plotting. 
+
+#Setup
+To create an article in R, first select <b>Global Options</b> under <b>Tools</b>.Select <b>Sweave</b> (7th option down), weave Rnw files with <b>Knitr</b>. Next, create a <b>New File</b>, with RSweave. We are now ready to begin. 
+
+A PDF example can be found here. 
+
