@@ -53,5 +53,14 @@ library(dplyr)library(Lahman)library(ggplot2)library(ggiraph)Extracting the 
 df&amp;lt;-Teams%&amp;gt;%filter(yearID==1980)%&amp;gt;%select(name,HR)%&amp;gt;%arrange(HR)str give the structure of whatever data you have. Store your data as a factor vector, rather than a character vector.The benefit to this is that factor vectors are organized into different levels .</description>
     </item>
     
+    <item>
+      <title>How to Create a Word Cloud</title>
+      <link>/blog/wordcloud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/wordcloud/</guid>
+      <description>What is a Word Cloud?A word cloud is an image composed of words whose size is determined by the frequency in which they appear. Today, we will be creating a word cloud from the Tame Impala album, Currents. First, create a word text file, and save the lyrics (no titles) in that file. Save both this file and a new R script file in the same directory. Now we can begin.</description>
+    </item>
+    
   </channel>
 </rss>
