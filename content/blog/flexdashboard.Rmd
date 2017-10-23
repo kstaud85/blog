@@ -2,7 +2,7 @@
 title: "Flexdashboard Tutorial"
 output: html_document
 ---
-<http://rmarkdown.rstudio.com>
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -38,7 +38,8 @@ Use <b>stringr</b> to run through the data, where {8} is the number of digits/ch
 sum(str_detect(deaths$INCIDENT_DATE,"\\d{8}"))
 ```
 
-Some data has been posted into the wrong column. To fix this error, we run a loop that says for every i (integer) from 1 to 36,574, look for a string of of 8 characters. A few dates from INCIDENT_DATE are found in the FATALITY column. If thats the case, where incident is missing the data and fatality has it, they swap. Now we have the correct data. 
+Some data has been posted into the wrong column. To fix this error, we run a loop that says for every i (integer) from 1 to 36,574, look for a string of of 8 characters. A few dates from INCIDENT_DATE are found in the FATALITY column. If thats the case, where incident is missing the data and fatality has it, they swap. Now we have the correct data.
+
 
 ```{r warning=FALSE,message=FALSE}
 for(i in 1:36574){ 
@@ -63,6 +64,7 @@ for(i in 1:36574)
     deaths$INCIDENT_DATE[i]<-deaths$FATALITY[i]
   }
   print(i)
+}
 ```
 
 ##Data Visualization
