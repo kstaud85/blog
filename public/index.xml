@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kimberly Staudt</title>
-    <link>https://kimsdatascienceblog.netlify.com/</link>
+    <link>/</link>
     <description>Recent content on Kimberly Staudt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
-	<atom:link href="https://kimsdatascienceblog.netlify.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data Visualization</title>
-      <link>https://kimsdatascienceblog.netlify.com/blog/datavisualization/</link>
+      <link>/blog/datavisualization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kimsdatascienceblog.netlify.com/blog/datavisualization/</guid>
+      <guid>/blog/datavisualization/</guid>
       <description>The purpose of this tutorial is to demonstrate how to plot data on a graph using the lahman baseball database.
 Open a new R Script.The following will need to be installed: lahman,ggplot2,ggiraph, and dplyr.This can be achieved by choosing the Install Packages option under the Tools tab. Once installed, pull from the library as seen below:
 library(Lahman)library(dplyr)FALSE FALSE Attaching package: &amp;#39;dplyr&amp;#39;FALSE The following objects are masked from &amp;#39;package:stats&amp;#39;:FALSE FALSE filter, lagFALSE The following objects are masked from &amp;#39;package:base&amp;#39;:FALSE FALSE intersect, setdiff, setequal, unionlibrary(ggplot2)library(ggiraph)Now we can begin.</description>
@@ -23,20 +23,31 @@ library(Lahman)library(dplyr)FALSE FALSE Attaching package: &amp;#39;dplyr&amp
     
     <item>
       <title>Data Visualization: Histograms and Bar Charts</title>
-      <link>https://kimsdatascienceblog.netlify.com/blog/historgrams/</link>
+      <link>/blog/historgrams/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kimsdatascienceblog.netlify.com/blog/historgrams/</guid>
+      <guid>/blog/historgrams/</guid>
       <description>The purpose of this tutorial is to demonstrate how to create histograms and barcharts using dplyr and the lahman data base. Histograms are useful when a variable is represented by a range of numbers rather than a single point (such as in line charts). Simularly, a bar chart measures the height (numerical value) of a variable.
 For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2.</description>
     </item>
     
     <item>
-      <title>Histograms 2</title>
-      <link>https://kimsdatascienceblog.netlify.com/blog/histograms2/</link>
+      <title>Flexdashboard Tutorial</title>
+      <link>/blog/flexdashboard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kimsdatascienceblog.netlify.com/blog/histograms2/</guid>
+      <guid>/blog/flexdashboard/</guid>
+      <description>What is Flexdashboard?Flexdashboard is an R package that allows the user to display data visualizations such as graphs,tables, tables, and widgets on a dashboard. Flexdashboard users can easily make size adjustments to chart proportions, and make the visualizations mobile friendly. An example of flexdashboard being used in this tutorial can be found below: https://kstaud85.github.io/https-kstaud85.github.io-dashboard/
+Install and pull the following packages from the library:
+library(dplyr)library(ggplot2)library(flexdashboard)library(stringr)library(lubridate)The data used today can be found on kaggle, but any data set is suitable: https://www.</description>
+    </item>
+    
+    <item>
+      <title>Histograms 2</title>
+      <link>/blog/histograms2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/histograms2/</guid>
       <description>This is the second tutorial on creating historgrams via RStudio. Install the following and pull from the library:
 library(dplyr)library(Lahman)library(ggplot2)library(ggiraph)Extracting the DataIn the last post, we assigned our extracted data to df(dataframe).Complete this step again.
 df&amp;lt;-Teams%&amp;gt;%filter(yearID==1980)%&amp;gt;%select(name,HR)%&amp;gt;%arrange(HR)str give the structure of whatever data you have. Store your data as a factor vector, rather than a character vector.The benefit to this is that factor vectors are organized into different levels .</description>

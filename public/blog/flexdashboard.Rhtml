@@ -1,0 +1,84 @@
+---
+title: "Flexdashboard Tutorial"
+author: "Kimberly Staudt"
+date: 2015-07-23T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "dplyr", "lahman"]
+---
+
+<div id="r-markdown" class="section level1">
+
+
+<h1>Extracting the Data</h1>
+<p>This is the second tutorial on creating historgrams via RStudio.
+Install the following and pull from the library:
+</p>
+
+<pre class="r"><code>
+library(stringr)
+library(dplyr)
+library(ggplot2)
+library(flexdashboard)
+library(lubridate)
+</code></pre>
+
+<p>The data used today can be found on kaggle, but any data set is suitable:
+<https://www.kaggle.com/orangutan/koreanconflict>
+
+<h2>Extract the Data</h2>
+
+<p>Make sure the csv file is downloaded and saved into your working directory.
+Set the file to the variable "deaths".</p>
+
+<pre class="r"><code>{r warning=FALSE, message=FALSE}
+deaths&lt:-read.csv('KoreanConflict.csv',header=TRUE,stringsAsFactors = FALSE)
+</code></pre>
+
+<p>Use <b>stringr</b> to run through the data, where {8} is the number of digits/characters in the string it is looking for. In this example, we are looking to find all instances where there is a record with 8 digits in the column labeled INCIDENT_DATE. this will give us the day the soldier died.</p>
+
+<pre class="r"><code>{r warning=FALSE,message=FALSE}
+sum(str_detect(deaths$INCIDENT_DATE,"\\d{8}"))</code></pre>
+
+<p>Some data has been posted into the wrong column. To fix this error, we run a loop that says for every i (integer) from 1 to 36,574, look for a string of of 8 characters. A few dates from INCIDENT_DATE are found in the FATALITY column. If thats the case, where incident is missing the data and fatality has it, they swap. Now we have the correct data. </p>
+  
+<pre class="r"><code>{r warning=FALSE,message=FALSE}
+for(i in 1:36574){ 
+  incident<-str_detect(deaths$INCIDENT_DATE[i],"\\d{8}")
+  fatality<-str_detect(deaths$FATALITY[i],"\\d{8}")
+  if(incident==FALSE & fatality==TRUE){
+    deaths$INCIDENT_DATE[i]<-deaths$FATALITY[i]
+  }
+  print(i)
+}</code></pre>
+
+<p>Alternatively, the same result can be achieved with the code below:</p>
+
+<pre class="r"><code>for(i in 1:36574)
+  { 
+  incident<-str_detect(deaths$INCIDENT_DATE[i],"\\d{8}")
+  fatality<-str_detect(deaths$FATALITY[i],"\\d{8}")
+  if(!incident & fatality){
+    deaths$INCIDENT_DATE[i]<-deaths$FATALITY[i]
+  }
+  print(i)
+  </code></pre>
+  
+<h3>Data Visualization</h3>
+
+<p>
+Set deaths to df (data frame), anf filter with the str_detect function used earlier in our loop. The Vietnam War (1950-1953) can be filtered as any date before July 1953 because any deaths after that date would likely have an insignificant relationship with the war. Some outliers were not confirmed dead until decdes after the war. In summerize, the number of deaths for INCIDENT_DATE is <i>n</i>.</p>
+
+<pre class="r"><code>df<-deaths%>%
+  filter(str_detect(deaths$INCIDENT_DATE,"\\d{8}")==TRUE)%>%
+  group_by(INCIDENT_DATE)%>%
+  summarize(num_deaths=n())%>%
+  mutate(date=ymd(INCIDENT_DATE))%>%
+  filter(date<="1953-07-27")%>%
+  select(INCIDENT_DATE,num_deaths,date) </code></pre>
+
+<p>Plot the data using ggplot2.You can set the intervals you wish to display the data with data_breaks.</p>
+<pre class="r"><code>ggplot()+
+  geom_line(data=df,aes(x=date,y=num_deaths))+
+  scale_x_date(date_breaks = '3 months', date_labels = "%b %y")</code></pre>
+</div>
+

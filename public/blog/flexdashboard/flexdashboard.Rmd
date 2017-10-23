@@ -18,6 +18,7 @@ library(dplyr)
 library(ggplot2)
 library(flexdashboard)
 library(stringr)
+library(lubridate)
 ```
 
 The data used today can be found on kaggle, but any data set is suitable:
