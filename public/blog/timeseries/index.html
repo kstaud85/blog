@@ -7,7 +7,7 @@
     <meta name="author" content="map[]" />
     <meta name="description" content="A Data Science Blog">
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
-    <title>Bar Charts</title>
+    <title>Time Series</title>
     <meta name="generator" content="Hugo 0.30.2" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
@@ -47,90 +47,45 @@
       <div class="container">
         <div class="blog-post">
           <h3>
-            <strong><a href="/bar-charts/">Bar Charts</a></strong>
+            <strong><a href="/blog/timeseries/">Time Series</a></strong>
           </h3>
         </div>
         <div class="blog-title">
           <h4>
-          October 10, 2017
+          November 8, 2017
             &nbsp;&nbsp;
-            
-            <span class="label label-success">data visualization</span>
-            
-            <span class="label label-success">dplyr</span>
-            
-            <span class="label label-success">lahman</span>
-            
-            <span class="label label-success">ggplot2</span>
             
           </h4>
         </div>
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="blogpost">
-              <p>The purpose of this tutorial is to demonstrate how to create barcharts using dplyr and the lahman data base. Bar charts are useful for showing the height (numerical value) of a variable.</p>
-<p>For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2. A bar chart would list the colors on the X axis, with blue being the highest bar and green the lowest. Bar charts are an easy way to display a limited amount of variables. If you were surveying 1000 people whom collectively named 100 different colors, a different chart would be more suitable.</p>
-<p>First, install the following packages and pull them from the library as demonstrated below. Some packages may not need to be updated if you have already installed them. In this case, you need only to pull them from the library:</p>
-<pre class="r"><code>library(Lahman)
-library(dplyr)
-library(ggiraph)
+              <p>This is a tutorial on how to create a time series plot in R Studio. We will be using the same data we used to create an instagram, and apply the same extracting techniques.</p>
+<p>Install the following and pull from the library:</p>
+<pre class="r"><code>library(dplyr)
+library(Lahman)
 library(ggplot2)</code></pre>
-<div id="how-to-make-a-barchart" class="section level2">
-<h2>How to make a Barchart</h2>
-<p>Here, we want to extract data from the <b>Teams</b> table, for the year 1980. Select team name and homeruns for the columns, and arrange the order by homerun. Assign the code to a variable, df (data frame) to be referenced later.</p>
-<pre class="r"><code>df&lt;-Teams%&gt;%
-  filter(yearID==1980)%&gt;%
-  select(name,HR)%&gt;%
-  arrange(HR)</code></pre>
-<pre class="r"><code>df$name&lt;-factor(df$name,levels=df$name)</code></pre>
+<div id="extracting-the-data" class="section level2">
+<h2>Extracting the Data</h2>
+<p>Assigned the extracted data to result (dataframe).</p>
+<pre class="r"><code>result&lt;-Batting%&gt;%
+        filter(playerID==&#39;ruthba01&#39;)%&gt;%
+        select(yearID,SO,HR)</code></pre>
+</div>
+<div id="data-visualization" class="section level2">
+<h2>Data visualization</h2>
+<p>In this representation, we are going to name our <i>x</i> and <i>y</i> coordinates with <i>xlab</i> and <i>ylab</i>, repsectively. Use geom point to create the data points, and geom line to connect those points.</p>
 <pre class="r"><code>ggplot()+
-  geom_bar(data=df,aes(x=name,y=HR), stat=&quot;identity&quot;, color=&quot;white&quot;, fill=&quot;blue&quot;)+
-  coord_flip()</code></pre>
-<p><img src="/bar-charts_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+  geom_point(data=result,aes(x=yearID,y=HR),color=&quot;red&quot;,size=5)+
+  geom_line(data=result,aes(x=yearID,y=HR), color=&quot;blue&quot;, size=3)+
+  xlab(&quot;year&quot;)+
+  ylab(&quot;homeruns&quot;)</code></pre>
+<p><img src="/timeseries_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
 
               <hr>
               <div class="related-posts">
                 <h5>Related Posts</h5>
-                
-                  <div class="row">
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                      <h6 style="text-align: right">
-                        October 11, 2017
-                      </h6>
-                    </div>
-                    <div class="col-sm-8 col-md-8 col-lg-8">
-                      <h6 style="text-align: left">
-                        <strong><a href="/blog/scatter-plots/">Scatter Plots</a></strong>
-                      </h6>
-                    </div>
-                  </div>
-                
-                  <div class="row">
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                      <h6 style="text-align: right">
-                        October 11, 2017
-                      </h6>
-                    </div>
-                    <div class="col-sm-8 col-md-8 col-lg-8">
-                      <h6 style="text-align: left">
-                        <strong><a href="/scatter-plots/">Scatter Plots</a></strong>
-                      </h6>
-                    </div>
-                  </div>
-                
-                  <div class="row">
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                      <h6 style="text-align: right">
-                        October 10, 2017
-                      </h6>
-                    </div>
-                    <div class="col-sm-8 col-md-8 col-lg-8">
-                      <h6 style="text-align: left">
-                        <strong><a href="/blog/bar-charts/">Bar Charts</a></strong>
-                      </h6>
-                    </div>
-                  </div>
                 
               </div>
             </div>

@@ -1,0 +1,33 @@
+---
+title: Time Series
+author: Kimberly Staudt
+date: '2017-11-08'
+slug: timeseries
+categories: [R Studio]
+tags: []
+---
+
+
+
+<p>This is a tutorial on how to create a time series plot in R Studio. We will be using the same data we used to create an instagram, and apply the same extracting techniques.</p>
+<p>Install the following and pull from the library:</p>
+<pre class="r"><code>library(dplyr)
+library(Lahman)
+library(ggplot2)</code></pre>
+<div id="extracting-the-data" class="section level2">
+<h2>Extracting the Data</h2>
+<p>Assigned the extracted data to result (dataframe).</p>
+<pre class="r"><code>result&lt;-Batting%&gt;%
+        filter(playerID==&#39;ruthba01&#39;)%&gt;%
+        select(yearID,SO,HR)</code></pre>
+</div>
+<div id="data-visualization" class="section level2">
+<h2>Data visualization</h2>
+<p>In this representation, we are going to name our <i>x</i> and <i>y</i> coordinates with <i>xlab</i> and <i>ylab</i>, repsectively. Use geom point to create the data points, and geom line to connect those points.</p>
+<pre class="r"><code>ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR),color=&quot;red&quot;,size=5)+
+  geom_line(data=result,aes(x=yearID,y=HR), color=&quot;blue&quot;, size=3)+
+  xlab(&quot;year&quot;)+
+  ylab(&quot;homeruns&quot;)</code></pre>
+<p><img src="/timeseries_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>

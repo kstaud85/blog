@@ -16,7 +16,7 @@ A word cloud is an image composed of words whose size is determined by the frequ
 Save both this file and a new R script file in the same directory. Now we can begin. 
 
 
-Read in the text file with the <b>scan</b> function.Scanning the data shows that there are 407 lines. The character function returns the character value, while the new line <b>\n</b> is used as a seperator. Store the in the variable,<i>lines</i>.
+Read in the text file with the scan function.Scanning the data shows that there are 407 lines. The character function returns the character value, while the new line is used as a seperator. Store the in the variable,<i>lines</i>.
 ```{r}
 lines<-scan('currents album.txt',what=character(),sep='\n')
 ```
@@ -48,7 +48,7 @@ word_freq<-words_df%>%
   summarise(count=n())
 ```
 
-We are now ready to finalize our wordcloud. View pallete colors with  the <b>display.brewer.all()<b> function. We are going to select the word and count column in word_freq. Our color pallete today is called <b>Set2</b>. 
+We are now ready to finalize our wordcloud. View pallete colors with  the display.brewer.all() function. We are going to select the word and count column in word_freq. Our color pallete today is called Set2. 
 ```{r}
 
 wordcloud(word_freq$word,word_freq$count,color=brewer.pal(24, 'Set2'))
