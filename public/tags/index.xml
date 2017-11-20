@@ -2,48 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kimberly Staudt</title>
-    <link>https://kimsdatascienceblog.netlify.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Kimberly Staudt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 11 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://kimsdatascienceblog.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data Visualization</title>
-      <link>https://kimsdatascienceblog.netlify.com/tags/data-visualization/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      <link>/tags/data-visualization/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kimsdatascienceblog.netlify.com/tags/data-visualization/</guid>
+      <guid>/tags/data-visualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dplyr</title>
-      <link>https://kimsdatascienceblog.netlify.com/tags/dplyr/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      <link>/tags/dplyr/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kimsdatascienceblog.netlify.com/tags/dplyr/</guid>
+      <guid>/tags/dplyr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flexdashboard</title>
+      <link>/tags/flexdashboard/</link>
+      <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/flexdashboard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ggplot2</title>
-      <link>https://kimsdatascienceblog.netlify.com/tags/ggplot2/</link>
-      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      <link>/tags/ggplot2/</link>
+      <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kimsdatascienceblog.netlify.com/tags/ggplot2/</guid>
+      <guid>/tags/ggplot2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lahman</title>
-      <link>https://kimsdatascienceblog.netlify.com/tags/lahman/</link>
+      <link>/tags/lahman/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kimsdatascienceblog.netlify.com/tags/lahman/</guid>
+      <guid>/tags/lahman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lubridate</title>
+      <link>/tags/lubridate/</link>
+      <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lubridate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stringr</title>
+      <link>/tags/stringr/</link>
+      <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/stringr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tidytext</title>
+      <link>/tags/tidytext/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tidytext/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wordcloud</title>
+      <link>/tags/wordcloud/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/wordcloud/</guid>
       <description></description>
     </item>
     

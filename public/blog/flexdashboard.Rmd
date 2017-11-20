@@ -1,6 +1,10 @@
 ---
 title: "Flexdashboard Tutorial"
 output: html_document
+date: '2017-10-20'
+slug: felexdashboard
+categories: [R Studio]
+tags: [dplyr, lubridate, stringr,ggplot2,flexdashboard,data visualization]
 ---
 
 ```{r setup, include=FALSE}
