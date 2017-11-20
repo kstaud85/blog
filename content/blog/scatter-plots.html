@@ -1,0 +1,42 @@
+---
+title: Scatter Plots
+author: ''
+date: '2017-10-11'
+slug: scatter-plots
+categories: [R Studio]
+tags: [ data visualization,lahman, ggplot2,dplyr]
+---
+
+
+
+<p>The purpose of this tutorial is to demonstrate how to plot data on a graph using the lahman baseball database.</p>
+<p>Open a new R Script.The following will need to be installed: lahman,ggplot2,ggiraph, and dplyr.This can be achieved by choosing the <b>Install Packages</b> option under the <b>Tools</b> tab. Once installed, pull from the library as seen below:</p>
+<pre class="r"><code>library(Lahman)
+library(dplyr)
+library(ggplot2)
+library(ggiraph)</code></pre>
+<p>Now we can begin.</p>
+<div id="grouping-filtering-data" class="section level2">
+<h2>Grouping &amp; Filtering Data</h2>
+<p>Under the <b>Insert</b> tab choose <b>R</b>. Type the code below into the box. The data is grouped using the player’s ID, where columns show their career homeruns and career strike outs. To filter the data, we specify that we want only players with career homeruns greater than 400. We then set this to a variable,<b>df</b>, to be referenced to later.</p>
+<pre class="r"><code>df&lt;-Batting%&gt;%
+  group_by(playerID)%&gt;%
+  summarize(career_HR=sum(HR),career_SO=sum(SO))%&gt;%
+  filter(career_HR&gt;=400)</code></pre>
+</div>
+<div id="joining-tables" class="section level2">
+<h2>Joining Tables</h2>
+<p>To join our DF table with the Master table, type the following below. Again, we are selecting the playerId, first and last name, career homeruns, and career strikeouts. Finally, assign the variable name HR_vs_SO to be referenced in the next step.</p>
+<pre class="r"><code>HR_vs_SO&lt;-inner_join(df,Master,by=c(&quot;playerID&quot;))%&gt;%
+  select(nameFirst,nameLast,career_HR,career_SO)</code></pre>
+</div>
+<div id="plots-and-graphs" class="section level2">
+<h2>Plots and Graphs</h2>
+<p>Using <b>ggplot</b> the data can now be plotted onto a graph.The <b>aes</b> function is where you will specify which variables are to be plotted on the <b>X</b> and <b>Y</b> axis. Use <b>ggtitle</b> to title your graph, and <b>xlab</b> and <b>ylab</b> to title each axis.</p>
+<pre class="r"><code>ggplot()+
+  geom_point_interactive(data=HR_vs_SO,aes(x=career_SO,y=career_HR,tooltop=nameLast, data_id=nameLast))+
+  ggtitle(&quot;Career Homeruns vs. Strikeouts for Great Hitters&quot;)+
+  xlab(&quot;Career Strikeouts&quot;)+
+  ylab(&quot;Career Homeruns&quot;)</code></pre>
+<p><img src="/blog/scatter-plots_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>

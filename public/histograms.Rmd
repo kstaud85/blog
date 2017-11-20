@@ -1,0 +1,47 @@
+---
+title: Histograms
+author: KImberly Staudt
+date: '2017-10-08'
+slug: histograms
+categories: [R Studio]
+tags: [dplyr, ggplot2,lahman,data visualization]
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is the second tutorial on creating historgrams via RStudio.
+Install the following and pull from the library:
+
+```{r warning=FALSE, message=FALSE}
+library(dplyr)
+library(Lahman)
+library(ggplot2)
+```
+
+##Extracting the Data
+
+Assigned the extracted data to result (dataframe).
+```{r warning=FALSE, message=FALSE}
+result<-Batting%>%
+        filter(playerID=='ruthba01')%>%
+        select(yearID,SO,HR)
+```
+
+##Data visualization
+
+In the last post, we used ggplot to create a visual representation of the data. In this representation, we are going to name our <i>x</i> and <i>y</i> coordinates with <i>xlab</i> and <i>ylab</i>, repsectively.  Use <i>ggiraph</i> to change color characteristics when hovering over the graph.
+```{r warning=FALSE, message=FALSE}
+
+ggplot()+
+  geom_histogram(data=result,aes(x=HR),bins=5,color="red",fill="white")
+
+```
+
+
+
+
+
+

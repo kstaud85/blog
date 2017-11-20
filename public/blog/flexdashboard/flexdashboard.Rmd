@@ -2,12 +2,12 @@
 title: "Flexdashboard Tutorial"
 output: html_document
 ---
-<http://rmarkdown.rstudio.com>
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## What is flexdashboard?
+## What is Flexdashboard?
 
 Flexdashboard is an R package that allows the user to display data visualizations such as graphs,tables, tables, and widgets on a dashboard. Flexdashboard users can easily make size adjustments to chart proportions, and make the visualizations mobile friendly. An example of flexdashboard being used in this tutorial can be found below:
 <https://kstaud85.github.io/https-kstaud85.github.io-dashboard/>
@@ -27,10 +27,12 @@ The data used today can be found on kaggle, but any data set is suitable:
 ##Extract the Data
 
 Make sure the csv file is downloaded and saved into your working directory.
-Set the file to the variable "deaths".
+Set the file to the variable "deaths". Use the colnames function to show the column names.
 
 ```{r warning=FALSE, message=FALSE}
 deaths<-read.csv('KoreanConflict.csv',header=TRUE,stringsAsFactors = FALSE)
+
+colnames(deaths)
 ```
 
 Use <b>stringr</b> to run through the data, where {8} is the number of digits/characters in the string it is looking for. In this example, we are looking to find all instances where there is a record with 8 digits in the column labeled INCIDENT_DATE. this will give us the day the soldier died.
@@ -39,7 +41,8 @@ Use <b>stringr</b> to run through the data, where {8} is the number of digits/ch
 sum(str_detect(deaths$INCIDENT_DATE,"\\d{8}"))
 ```
 
-Some data has been posted into the wrong column. To fix this error, we run a loop that says for every i (integer) from 1 to 36,574, look for a string of of 8 characters. A few dates from INCIDENT_DATE are found in the FATALITY column. If thats the case, where incident is missing the data and fatality has it, they swap. Now we have the correct data. 
+Some data has been posted into the wrong column. To fix this error, we run a loop that says for every i (integer) from 1 to 36,574, look for a string of of 8 characters. A few dates from INCIDENT_DATE are found in the FATALITY column. If that's the case, where incident is missing the data and fatality has it, they swap. Now we have the correct data.
+
 
 ```{r warning=FALSE,message=FALSE}
 for(i in 1:36574){ 
@@ -64,11 +67,12 @@ for(i in 1:36574)
     deaths$INCIDENT_DATE[i]<-deaths$FATALITY[i]
   }
   print(i)
+}
 ```
 
 ##Data Visualization
 
-Set deaths to df (data frame), anf filter with the str_detect function used earlier in our loop. The Vietnam War (1950-1953) can be filtered as any date before July 1953 because any deaths after that date would likely have an insignificant relationship with the war. Some outliers were not confirmed dead until decdes after the war. In summerize, the number of deaths for INCIDENT_DATE is <b>n</b>.
+Set deaths to df (data frame), and filter with the str_detect function used earlier in our loop. The Vietnam War (1950-1953) can be filtered as any date before July 1953 because any deaths after that date would likely have an insignificant relationship with the war. Some outliers were not confirmed dead until decades after the war. In summarize, the number of deaths for INCIDENT_DATE is <i>n</i>.
 
 ```{r}
 df<-deaths%>%

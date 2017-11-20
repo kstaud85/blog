@@ -30,7 +30,7 @@ DF &lt;- Batting%&gt;%
 
 <h1>Grouping & Filtering Data</h1>
 <p>Under the <b>Insert</b> tab choose <b>R</b>. Type the code below into the box. The data is grouped using the player's ID, where columns show their career homeruns and career strike outs. To filter the data, we specify that we want only players with career homeruns greater than 400. We then set this to a variable,<b>df</b>, to be referenced to later. </p>
-HR_vs_SO &lt;- inner_join(DF,Master, by=c(&quot;playerID&quot;))%&gt;% 
+R_vs_SO &lt;- inner_join(DF,Master, by=c(&quot;playerID&quot;))%&gt;% 
   select(nameFirst,nameLast,career_SO, career_HR) 
   
 <h2>Joining Tables</h2>
