@@ -1,10 +1,10 @@
 ---
 title: Time Series
 author: Kimberly Staudt
-date: '2017-11-08'
+date: '2017-10-14'
 slug: timeseries
 categories: [R Studio]
-tags: []
+tags: [dplyr,lahman, ggplot2]
 ---
 
 ```{r setup, include=FALSE}

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R Studio on Kimberly Staudt</title>
-    <link>/categories/r-studio/</link>
+    <link>https://kimsdatascienceblog.netlify.com/categories/r-studio/</link>
     <description>Recent content in R Studio on Kimberly Staudt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 08 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/r-studio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kimsdatascienceblog.netlify.com/categories/r-studio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Time Series</title>
-      <link>/timeseries/</link>
+      <link>https://kimsdatascienceblog.netlify.com/timeseries/</link>
       <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/timeseries/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/timeseries/</guid>
       <description>This is a tutorial on how to create a time series plot in R Studio. We will be using the same data we used to create an instagram, and apply the same extracting techniques.
 Install the following and pull from the library:
 library(dplyr)library(Lahman)library(ggplot2)Extracting the DataAssigned the extracted data to result (dataframe).
@@ -25,10 +25,10 @@ result&amp;lt;-Batting%&amp;gt;%filter(playerID==&amp;#39;ruthba01&amp;#39;)%&a
     
     <item>
       <title>Scatter Plots</title>
-      <link>/scatter-plots/</link>
+      <link>https://kimsdatascienceblog.netlify.com/scatter-plots/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/scatter-plots/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/scatter-plots/</guid>
       <description>The purpose of this tutorial is to demonstrate how to plot data on a graph using the lahman baseball database.
 Open a new R Script.The following will need to be installed: lahman,ggplot2,ggiraph, and dplyr.This can be achieved by choosing the Install Packages option under the Tools tab. Once installed, pull from the library as seen below:
 library(Lahman)library(dplyr)library(ggplot2)library(ggiraph)Now we can begin.
@@ -37,10 +37,10 @@ Grouping &amp;amp; Filtering DataUnder the Insert tab choose R.</description>
     
     <item>
       <title>Scatter Plots</title>
-      <link>/blog/scatter-plots/</link>
+      <link>https://kimsdatascienceblog.netlify.com/blog/scatter-plots/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blog/scatter-plots/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/blog/scatter-plots/</guid>
       <description>The purpose of this tutorial is to demonstrate how to plot data on a graph using the lahman baseball database.
 Open a new R Script.The following will need to be installed: lahman,ggplot2,ggiraph, and dplyr.This can be achieved by choosing the Install Packages option under the Tools tab. Once installed, pull from the library as seen below:
 library(Lahman)library(dplyr)library(ggplot2)library(ggiraph)Now we can begin.
@@ -49,30 +49,30 @@ Grouping &amp;amp; Filtering DataUnder the Insert tab choose R.</description>
     
     <item>
       <title>Bar Charts</title>
-      <link>/bar-charts/</link>
+      <link>https://kimsdatascienceblog.netlify.com/bar-charts/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/bar-charts/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/bar-charts/</guid>
       <description>The purpose of this tutorial is to demonstrate how to create barcharts using dplyr and the lahman data base. Bar charts are useful for showing the height (numerical value) of a variable.
 For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2. A bar chart would list the colors on the X axis, with blue being the highest bar and green the lowest.</description>
     </item>
     
     <item>
       <title>Bar Charts</title>
-      <link>/blog/bar-charts/</link>
+      <link>https://kimsdatascienceblog.netlify.com/blog/bar-charts/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blog/bar-charts/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/blog/bar-charts/</guid>
       <description>The purpose of this tutorial is to demonstrate how to create barcharts using dplyr and the lahman data base. Bar charts are useful for showing the height (numerical value) of a variable.
 For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2. A bar chart would list the colors on the X axis, with blue being the highest bar and green the lowest.</description>
     </item>
     
     <item>
       <title>Histograms</title>
-      <link>/blog/histograms/</link>
+      <link>https://kimsdatascienceblog.netlify.com/blog/histograms/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blog/histograms/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/blog/histograms/</guid>
       <description>This is the second tutorial on creating historgrams via RStudio. Install the following and pull from the library:
 library(dplyr)library(Lahman)library(ggplot2)Extracting the DataAssigned the extracted data to result (dataframe).
 result&amp;lt;-Batting%&amp;gt;%filter(playerID==&amp;#39;ruthba01&amp;#39;)%&amp;gt;%select(yearID,SO,HR)Data visualizationIn the last post, we used ggplot to create a visual representation of the data. In this representation, we are going to name our x and y coordinates with xlab and ylab, repsectively. Use ggiraph to change color characteristics when hovering over the graph.</description>
@@ -80,10 +80,10 @@ result&amp;lt;-Batting%&amp;gt;%filter(playerID==&amp;#39;ruthba01&amp;#39;)%&a
     
     <item>
       <title>Histograms</title>
-      <link>/histograms/</link>
+      <link>https://kimsdatascienceblog.netlify.com/histograms/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/histograms/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/histograms/</guid>
       <description>This is the second tutorial on creating historgrams via RStudio. Install the following and pull from the library:
 library(dplyr)library(Lahman)library(ggplot2)Extracting the DataAssigned the extracted data to result (dataframe).
 result&amp;lt;-Batting%&amp;gt;%filter(playerID==&amp;#39;ruthba01&amp;#39;)%&amp;gt;%select(yearID,SO,HR)Data visualizationIn the last post, we used ggplot to create a visual representation of the data. In this representation, we are going to name our x and y coordinates with xlab and ylab, repsectively. Use ggiraph to change color characteristics when hovering over the graph.</description>

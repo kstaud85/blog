@@ -3,102 +3,102 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/timeseries/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/timeseries/</loc>
     <lastmod>2017-11-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/how-to-create-a-word-cloud/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/how-to-create-a-word-cloud/</loc>
     <lastmod>2017-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/scatter-plots/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/scatter-plots/</loc>
     <lastmod>2017-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/scatter-plots/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/blog/scatter-plots/</loc>
     <lastmod>2017-10-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/bar-charts/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/bar-charts/</loc>
     <lastmod>2017-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/bar-charts/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/blog/bar-charts/</loc>
     <lastmod>2017-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/histograms/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/blog/histograms/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/histograms/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/histograms/</loc>
     <lastmod>2017-10-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/blog/</loc>
     <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/data-visualization/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/tags/data-visualization/</loc>
     <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/dplyr/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/tags/dplyr/</loc>
     <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/blog/flexdashboard/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/blog/flexdashboard/</loc>
   </url>
   
   <url>
-    <loc>/tags/ggplot2/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/tags/ggplot2/</loc>
     <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/blog/wordcloud/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/blog/wordcloud/</loc>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/</loc>
     <lastmod>2017-11-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/lahman/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/tags/lahman/</loc>
     <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/r-studio/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/categories/r-studio/</loc>
     <lastmod>2017-11-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://kimsdatascienceblog.netlify.com/tags/</loc>
     <lastmod>2017-10-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
