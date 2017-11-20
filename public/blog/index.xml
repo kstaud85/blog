@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Kimberly Staudt</title>
-    <link>/blog/</link>
+    <link>https://kimsdatascienceblog.netlify.com/blog/</link>
     <description>Recent content in Blogs on Kimberly Staudt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 08 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kimsdatascienceblog.netlify.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Time Series</title>
-      <link>/blog/timeseries/</link>
+      <link>https://kimsdatascienceblog.netlify.com/blog/timeseries/</link>
       <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blog/timeseries/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/blog/timeseries/</guid>
       <description>This is a tutorial on how to create a time series plot in R Studio. We will be using the same data we used to create an instagram, and apply the same extracting techniques.
 Install the following and pull from the library:
 library(dplyr)library(Lahman)library(ggplot2)Extracting the DataAssigned the extracted data to result (dataframe).
@@ -25,10 +25,10 @@ result&amp;lt;-Batting%&amp;gt;%filter(playerID==&amp;#39;ruthba01&amp;#39;)%&a
     
     <item>
       <title>Scatter Plots</title>
-      <link>/blog/scatter-plots/</link>
+      <link>https://kimsdatascienceblog.netlify.com/blog/scatter-plots/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blog/scatter-plots/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/blog/scatter-plots/</guid>
       <description>The purpose of this tutorial is to demonstrate how to plot data on a graph using the lahman baseball database.
 Open a new R Script.The following will need to be installed: lahman,ggplot2,ggiraph, and dplyr.This can be achieved by choosing the Install Packages option under the Tools tab. Once installed, pull from the library as seen below:
 library(Lahman)library(dplyr)library(ggplot2)library(ggiraph)Now we can begin.
@@ -37,20 +37,20 @@ Grouping &amp;amp; Filtering DataUnder the Insert tab choose R.</description>
     
     <item>
       <title>Bar Charts</title>
-      <link>/blog/bar-charts/</link>
+      <link>https://kimsdatascienceblog.netlify.com/blog/bar-charts/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blog/bar-charts/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/blog/bar-charts/</guid>
       <description>The purpose of this tutorial is to demonstrate how to create barcharts using dplyr and the lahman data base. Bar charts are useful for showing the height (numerical value) of a variable.
 For example, if you survey a room of 100 people on their favorite color you may recieve the following random sample results: blue 45, red 12, purple 20, orange 13, yellow 8, and green 2. A bar chart would list the colors on the X axis, with blue being the highest bar and green the lowest.</description>
     </item>
     
     <item>
       <title>Histograms</title>
-      <link>/blog/histograms/</link>
+      <link>https://kimsdatascienceblog.netlify.com/blog/histograms/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blog/histograms/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/blog/histograms/</guid>
       <description>This is the second tutorial on creating historgrams via RStudio. Install the following and pull from the library:
 library(dplyr)library(Lahman)library(ggplot2)Extracting the DataAssigned the extracted data to result (dataframe).
 result&amp;lt;-Batting%&amp;gt;%filter(playerID==&amp;#39;ruthba01&amp;#39;)%&amp;gt;%select(yearID,SO,HR)Data visualizationIn the last post, we used ggplot to create a visual representation of the data. In this representation, we are going to name our x and y coordinates with xlab and ylab, repsectively. Use ggiraph to change color characteristics when hovering over the graph.</description>
@@ -58,10 +58,10 @@ result&amp;lt;-Batting%&amp;gt;%filter(playerID==&amp;#39;ruthba01&amp;#39;)%&a
     
     <item>
       <title>Flexdashboard Tutorial</title>
-      <link>/blog/flexdashboard/</link>
+      <link>https://kimsdatascienceblog.netlify.com/blog/flexdashboard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/blog/flexdashboard/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/blog/flexdashboard/</guid>
       <description>What is Flexdashboard?Flexdashboard is an R package that allows the user to display data visualizations such as graphs,tables, tables, and widgets on a dashboard. Flexdashboard users can easily make size adjustments to chart proportions, and make the visualizations mobile friendly. An example of flexdashboard being used in this tutorial can be found below: https://kstaud85.github.io/https-kstaud85.github.io-dashboard/
 Install and pull the following packages from the library:
 library(dplyr)library(ggplot2)library(flexdashboard)library(stringr)library(lubridate)The data used today can be found on kaggle, but any data set is suitable: https://www.</description>
@@ -69,10 +69,10 @@ library(dplyr)library(ggplot2)library(flexdashboard)library(stringr)library(
     
     <item>
       <title>How to Create a Word Cloud</title>
-      <link>/blog/wordcloud/</link>
+      <link>https://kimsdatascienceblog.netlify.com/blog/wordcloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/blog/wordcloud/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/blog/wordcloud/</guid>
       <description>What is a Word Cloud?A word cloud is an image composed of words whose size is determined by the frequency in which they appear. Today, we will be creating a word cloud from the Tame Impala album, Currents. First, create a word text file, and save the lyrics (no titles) in that file. Save both this file and a new R script file in the same directory. Now we can begin.</description>
     </item>
     
