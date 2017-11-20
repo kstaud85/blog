@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wordcloud on Kimberly Staudt</title>
-    <link>/tags/wordcloud/</link>
+    <link>https://kimsdatascienceblog.netlify.com/tags/wordcloud/</link>
     <description>Recent content in Wordcloud on Kimberly Staudt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 01 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/wordcloud/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kimsdatascienceblog.netlify.com/tags/wordcloud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to Create a Word Cloud</title>
-      <link>/blog/wordcloud/</link>
+      <link>https://kimsdatascienceblog.netlify.com/blog/wordcloud/</link>
       <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blog/wordcloud/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/blog/wordcloud/</guid>
       <description>What is a Word Cloud?A word cloud is an image composed of words whose size is determined by the frequency in which they appear. Today, we will be creating a word cloud from the Tame Impala album, Currents. First, create a word text file, and save the lyrics (no titles) in that file. Save both this file and a new R script file in the same directory. Now we can begin.</description>
     </item>
     

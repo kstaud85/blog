@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kimberly Staudt</title>
-    <link>/tags/</link>
+    <link>https://kimsdatascienceblog.netlify.com/tags/</link>
     <description>Recent content in Tags on Kimberly Staudt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 01 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kimsdatascienceblog.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data Visualization</title>
-      <link>/tags/data-visualization/</link>
+      <link>https://kimsdatascienceblog.netlify.com/tags/data-visualization/</link>
       <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/data-visualization/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/tags/data-visualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dplyr</title>
-      <link>/tags/dplyr/</link>
+      <link>https://kimsdatascienceblog.netlify.com/tags/dplyr/</link>
       <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/dplyr/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/tags/dplyr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Flexdashboard</title>
-      <link>/tags/flexdashboard/</link>
+      <link>https://kimsdatascienceblog.netlify.com/tags/flexdashboard/</link>
       <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/flexdashboard/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/tags/flexdashboard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ggplot2</title>
-      <link>/tags/ggplot2/</link>
+      <link>https://kimsdatascienceblog.netlify.com/tags/ggplot2/</link>
       <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ggplot2/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/tags/ggplot2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lahman</title>
-      <link>/tags/lahman/</link>
+      <link>https://kimsdatascienceblog.netlify.com/tags/lahman/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/lahman/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/tags/lahman/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lubridate</title>
-      <link>/tags/lubridate/</link>
+      <link>https://kimsdatascienceblog.netlify.com/tags/lubridate/</link>
       <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/lubridate/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/tags/lubridate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stringr</title>
-      <link>/tags/stringr/</link>
+      <link>https://kimsdatascienceblog.netlify.com/tags/stringr/</link>
       <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/stringr/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/tags/stringr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tidytext</title>
-      <link>/tags/tidytext/</link>
+      <link>https://kimsdatascienceblog.netlify.com/tags/tidytext/</link>
       <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tidytext/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/tags/tidytext/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wordcloud</title>
-      <link>/tags/wordcloud/</link>
+      <link>https://kimsdatascienceblog.netlify.com/tags/wordcloud/</link>
       <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/wordcloud/</guid>
+      <guid>https://kimsdatascienceblog.netlify.com/tags/wordcloud/</guid>
       <description></description>
     </item>
     
