@@ -15,7 +15,7 @@ theme = "hugo-sustain"
   author = "Kimberly Staudt"
   description = "A Data Science Blog"
 
-  # Custom assets can be linked with their paths relative to static/
+  # Custom assets can be linked with their paths relative to public/
   custom_css = []
   custom_js  = []
 

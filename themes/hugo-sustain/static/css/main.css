@@ -1,10 +1,10 @@
 /* Main page with stikky-footer */
 html, body {
   height: 100%;
-  background-color: #fff;
+  background-color:  #a5cde5;
   font-family: 'Source Sans Pro', sans-serif;
   /* The html and body elements cannot have any padding or margin. */
-  border-top: 3px solid #27A822;
+  border-top: 3px solid #375f77;
 }
 
 /* Wrapper for page content to push down footer */
@@ -23,7 +23,7 @@ html, body {
   margin-bottom: 10px;
 }
 .navbar-default {
-  background-color: #ffffff;
+  background-color: #f1f1f1    ;
   border-color: #ffffff;
 }
 .navbar-default .navbar-brand {
@@ -91,10 +91,10 @@ html, body {
   margin: 20px 0;
 }
 .container a {
-  color: #27A822;
+  color: #375f77;
 }
 .container a:hover {
-  color: #267723;
+  color: #ECFF00;
 }
 .img-responsive {
  display: block;
@@ -115,7 +115,7 @@ html, body {
   font-size: 15px;
 }
 .panel-default h4 a, h5 a {
-  color: #27A822;
+  color: #FF0800  ;
 }
 .panel-default h4 a:hover, h5 a:hover {
   color: #267723;
@@ -143,13 +143,13 @@ html, body {
 }
 .social-links li a {
   font-size: 20px;
-  color: #000;
+  color: #000000;
   padding: 10px;
   padding-bottom: 4px;
   transition: all .4s ease;
 }
 .social-links li a:hover {
-  color: #000;
+  color: #ECFF00;
 }
 .avatar {
   padding-top: 5%;
@@ -180,10 +180,10 @@ html, body {
   text-decoration: none !important;
 }
 .text-muted {
-	color: #6b6b6b;
+	color: #ffffff;
 }
 div.footer{
-  border-bottom: 5px solid #27A822;;
+  border-bottom: 5px solid #375f77;;
 }
 /* Set the fixed height of the footer here */
 /*.footer {

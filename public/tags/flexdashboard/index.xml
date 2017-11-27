@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Flexdashboard on Kimberly Staudt</title>
-    <link>https://kimsdatascienceblog.netlify.com/tags/flexdashboard/</link>
+    <link>/tags/flexdashboard/</link>
     <description>Recent content in Flexdashboard on Kimberly Staudt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 20 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://kimsdatascienceblog.netlify.com/tags/flexdashboard/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/flexdashboard/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Flexdashboard Tutorial</title>
-      <link>https://kimsdatascienceblog.netlify.com/blog/felexdashboard/</link>
+      <link>/blog/felexdashboard/</link>
       <pubDate>Fri, 20 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kimsdatascienceblog.netlify.com/blog/felexdashboard/</guid>
+      <guid>/blog/felexdashboard/</guid>
       <description>What is Flexdashboard?Flexdashboard is an R package that allows the user to display data visualizations such as graphs,tables, tables, and widgets on a dashboard. Flexdashboard users can easily make size adjustments to chart proportions, and make the visualizations mobile friendly. An example of flexdashboard being used in this tutorial can be found below: https://kstaud85.github.io/https-kstaud85.github.io-dashboard/
 Install and pull the following packages from the library:
 library(dplyr)library(ggplot2)library(flexdashboard)library(stringr)library(lubridate)The data used today can be found on kaggle, but any data set is suitable: https://www.</description>
